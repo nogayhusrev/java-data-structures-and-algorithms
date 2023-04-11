@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 public class MergeTwoList {
 
@@ -19,9 +19,9 @@ public class MergeTwoList {
 
     }
 
-    public static MySinglyLinkedList mergeTwoList(MySinglyLinkedList a, MySinglyLinkedList b){
+    public static MySinglyLinkedList mergeTwoList(MySinglyLinkedList a, MySinglyLinkedList b) {
         for (int i = 1; i < b.size(); i++) {
-            a.add(b.getKthItemFromLast(b.size()-i));
+            a.add(b.getKthItemFromLast(b.size() - i));
         }
 
         return a;

@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 public class PrintMiddleNodeOfLinkedList {
 
@@ -15,12 +15,12 @@ public class PrintMiddleNodeOfLinkedList {
 
     }
 
-    public static void printMiddleNode(MySinglyLinkedList sll){
+    public static void printMiddleNode(MySinglyLinkedList sll) {
 
         Node a = sll.getHead();
         Node b = sll.getHead();
 
-        while (b != sll.getTail() && b.next != sll.getTail()){
+        while (b != sll.getTail() && b.next != sll.getTail()) {
             a = a.next;
             b = b.next.next;
         }
@@ -31,6 +31,6 @@ public class PrintMiddleNodeOfLinkedList {
             System.out.println(a.getId() + "," + a.next.getId());
 
     }
-    
-    
+
+
 }

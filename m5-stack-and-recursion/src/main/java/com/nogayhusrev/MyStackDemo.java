@@ -1,8 +1,4 @@
-package org.cydeo;
-
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Stack;
+package com.nogayhusrev;
 
 public class MyStackDemo {
     public static void main(String[] args) {
@@ -19,8 +15,6 @@ public class MyStackDemo {
             System.out.println(stack.pop());
 
         }
-
-
 
 
     }

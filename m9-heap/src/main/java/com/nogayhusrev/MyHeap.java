@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.nogayhusrev;
 
 import java.util.NoSuchElementException;
 
@@ -11,80 +11,104 @@ public class MyHeap {
         this.items = new int[capacity];
         this.size = 0;
     }
-    public int peek(){
+
+    public int peek() {
         if (size == 0)
             throw new NoSuchElementException();
         return items[0];
     }
-    public void insert(int value){
+
+    public void insert(int value) {
         if (size == items.length) throw new IndexOutOfBoundsException();
         else {
             items[size++] = value;
             bubbleUp();
         }
     }
+
     private void bubbleUp() {
         //calculate starting point
-        int index = size-1;
+        int index = size - 1;
         //while index > 0 parent is less than child continue...
         //1. swap child and parent
         //2.calculate next index
-        while (index > 0 && items[index] > items[parentIndex(index)]){
+        while (index > 0 && items[index] > items[parentIndex(index)]) {
             //swap
             swap(index, parentIndex(index));
             //assign index with the parent index
             index = parentIndex(index);
         }
-        
+
     }
-    public int remove(){
-        if (size==0) throw new NoSuchElementException();
+
+    public int remove() {
+        if (size == 0) throw new NoSuchElementException();
         else {
-            int result= items[0];
-            items[0]=items[--size];
+            int result = items[0];
+            items[0] = items[--size];
             bubbleDown();
             return result;
         }
     }
+
     private void swap(int first, int second) {
         int temp = items[first];
         items[first] = items[second];
         items[second] = temp;
     }
-    public void bubbleDown(){
-        int index=0;
+
+    public void bubbleDown() {
+        int index = 0;
         int largerChildIndex;
-        while (index<=size && !isValidParent(index)){
-            largerChildIndex=largerChildIndex(index);
+        while (index <= size && !isValidParent(index)) {
+            largerChildIndex = largerChildIndex(index);
             swap(index, largerChildIndex);
-            index=largerChildIndex;
+            index = largerChildIndex;
         }
     }
-    public boolean isValidParent(int index){
+
+    public boolean isValidParent(int index) {
         if (!hasLeftChild(index)) return true;
         else {
-            boolean isValid=(items[index]>=items[leftChildIndex(index)]);
+            boolean isValid = (items[index] >= items[leftChildIndex(index)]);
             if (hasRightChild(index)) {
-                isValid= (items[index]>=items[leftChildIndex(index)]&&items[index]>=items[rightChildIndex(index)]);
+                isValid = (items[index] >= items[leftChildIndex(index)] && items[index] >= items[rightChildIndex(index)]);
             }
             return isValid;
         }
     }
-    public int parentIndex(int index) { return (index-1)/2;}
-    public boolean hasLeftChild(int index){ return  leftChildIndex(index)<=size;}
-    public boolean hasRightChild(int index){ return  rightChildIndex(index)<=size;}
-    public int leftChildIndex(int index){ return index*2 +1;}
-    public int rightChildIndex(int index){ return index*2 +2;}
+
+    public int parentIndex(int index) {
+        return (index - 1) / 2;
+    }
+
+    public boolean hasLeftChild(int index) {
+        return leftChildIndex(index) <= size;
+    }
+
+    public boolean hasRightChild(int index) {
+        return rightChildIndex(index) <= size;
+    }
+
+    public int leftChildIndex(int index) {
+        return index * 2 + 1;
+    }
+
+    public int rightChildIndex(int index) {
+        return index * 2 + 2;
+    }
+
     public int largerChildIndex(int index) {
         if (!hasLeftChild(index)) return index;
         else if (!hasRightChild(index)) {
             return leftChildIndex(index);
         }
-        return items[leftChildIndex(index)]>items[rightChildIndex(index)] ? leftChildIndex(index):rightChildIndex(index);
+        return items[leftChildIndex(index)] > items[rightChildIndex(index)] ? leftChildIndex(index) : rightChildIndex(index);
     }
-    public void printHeap(){
+
+    public void printHeap() {
         for (int i = 0; i < size; i++) {
-            System.out.print(items[i]+ ", ");
+            System.out.print(items[i] + ", ");
         }
         System.out.println();
     }

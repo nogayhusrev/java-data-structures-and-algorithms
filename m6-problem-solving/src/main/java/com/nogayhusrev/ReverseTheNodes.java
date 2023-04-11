@@ -1,6 +1,4 @@
-package org.cydeo;
-
-import java.util.LinkedList;
+package com.nogayhusrev;
 
 public class ReverseTheNodes {
     public static void main(String[] args) {
@@ -16,14 +14,14 @@ public class ReverseTheNodes {
 
     }
 
-    public static void reverse(MySinglyLinkedList list){
+    public static void reverse(MySinglyLinkedList list) {
 
 
         Node prev = list.head;
         Node curr = list.head.next;
 
 
-        while (curr != null){
+        while (curr != null) {
             Node next = curr.next;
             curr.next = prev;
             prev = curr;

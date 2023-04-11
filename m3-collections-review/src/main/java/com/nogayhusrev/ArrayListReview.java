@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 import java.util.*;
 
@@ -8,15 +8,15 @@ public class ArrayListReview {
 
         List<Student> students = new ArrayList<>();
 
-        students.add(new Student(1,"Jack"));
-        students.add(new Student(2,"Julia"));
-        students.add(new Student(3,"Mike"));
-        students.add(new Student(4,"Mary"));
+        students.add(new Student(1, "Jack"));
+        students.add(new Student(2, "Julia"));
+        students.add(new Student(3, "Mike"));
+        students.add(new Student(4, "Mary"));
 
         //1. For Loop with get(index)
 
         System.out.println("-----------------Printing with legacy For-Loop.----------------");
-        for (int i = 0; i < students.size() ; i++) {
+        for (int i = 0; i < students.size(); i++) {
             System.out.println(students.get(i));
         }
 
@@ -25,21 +25,21 @@ public class ArrayListReview {
         System.out.println("-----------------Printing with Forward Iterator.----------------");
         Iterator<Student> iterator = students.listIterator();
 
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
-            
+
         }
 
         //Forward Iteration
         System.out.println("-----------------Printing with Backward Iterator.----------------");
-        while (((ListIterator<Student>) iterator).hasPrevious()){
+        while (((ListIterator<Student>) iterator).hasPrevious()) {
             System.out.println(((ListIterator<Student>) iterator).previous());
 
         }
 
         //3. For-Each Loop
         System.out.println("-----------------Printing with For-Each.----------------");
-        for (Student student : students){
+        for (Student student : students) {
             System.out.println(student);
         }
 
@@ -53,7 +53,7 @@ public class ArrayListReview {
         Collections.sort(students, new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
-                return o2.id-o1.id;
+                return o2.id - o1.id;
 
             }
         });
@@ -71,7 +71,6 @@ public class ArrayListReview {
         });
 
         students.forEach(student -> System.out.println(student));
-
 
 
     }

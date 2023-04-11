@@ -1,6 +1,4 @@
-package com.cydeo;
-
-import java.util.HashMap;
+package com.nogayhusrev;
 
 public class MyQueueTest {
     public static void main(String[] args) {

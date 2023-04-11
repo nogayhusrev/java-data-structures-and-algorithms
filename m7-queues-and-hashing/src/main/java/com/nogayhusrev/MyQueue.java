@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.nogayhusrev;
 
 
 import java.util.NoSuchElementException;
@@ -9,12 +9,11 @@ public class MyQueue<T> {
     int size = 0;
 
 
-
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return front == null;
     }
 
-    public void enqueue(T item){
+    public void enqueue(T item) {
         QNode<T> node = new QNode<>(item);
         if (isEmpty())
             front = back = node;
@@ -25,16 +24,16 @@ public class MyQueue<T> {
         size++;
     }
 
-    public T dequeue(){
+    public T dequeue() {
 
         QNode<T> frontNode;
         if (isEmpty())
             throw new NoSuchElementException();
 
-        if (front == back){
+        if (front == back) {
             frontNode = front;
             front = back = null;
-        }else {
+        } else {
             frontNode = front;
             front = front.next;
         }
@@ -43,12 +42,9 @@ public class MyQueue<T> {
         return (T) frontNode.val;
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
-
-
-
 
 
 }

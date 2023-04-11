@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 public class Recursion {
 
@@ -6,17 +6,17 @@ public class Recursion {
 
         System.out.println(fact(5));
         for (int i = 0; i < 20; i++) {
-            if (i == 0){
-                for (int j = 0 ; j < 3*(20-i) ; j++) {
+            if (i == 0) {
+                for (int j = 0; j < 3 * (20 - i); j++) {
                     System.out.print(" ");
                 }
                 System.out.print(fibo(i));
-            }else {
-                for (int j = 0 ; j < 3*(20-i) ; j++) {
+            } else {
+                for (int j = 0; j < 3 * (20 - i); j++) {
                     System.out.print(" ");
                 }
                 System.out.print(fibo(i));
-                for (int j = 0; j < i * 6 ; j++) {
+                for (int j = 0; j < i * 6; j++) {
                     System.out.print(" ");
                 }
                 System.out.print(fibo(i));
@@ -28,20 +28,20 @@ public class Recursion {
 
     }
 
-    public static long fact(long n ){
+    public static long fact(long n) {
         if (n <= 1)
             return 1;
         else
-            return n * fact(n-1);
+            return n * fact(n - 1);
     }
 
-    public static long fibo(long n){
-        if (n == 0 )
+    public static long fibo(long n) {
+        if (n == 0)
             return 0;
         if (n == 1)
             return 1;
 
-        return fibo(n-1) + fibo(n-2);
+        return fibo(n - 1) + fibo(n - 2);
 
     }
 }

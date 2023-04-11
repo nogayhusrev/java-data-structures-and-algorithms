@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 import java.util.ArrayList;
 
@@ -38,13 +38,13 @@ public class LinkedListDemo {
         System.out.println("Node 4 next address is " + node4.next);
 
 
-        Node head,current;
+        Node head, current;
         head = node1;
         current = node1;
         System.out.println("------------------Iterating List---------------");
 
-        while (current != null){
-            System.out.println("Id of node is: " + current.id) ;
+        while (current != null) {
+            System.out.println("Id of node is: " + current.id);
             current = current.next;
         }
 
@@ -52,7 +52,6 @@ public class LinkedListDemo {
 
 
     }
-
 
 
 }

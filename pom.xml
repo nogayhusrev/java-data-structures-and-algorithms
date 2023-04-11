@@ -7,11 +7,25 @@
     <groupId>com.nogayhusrev</groupId>
     <artifactId>java-data-structures-and-algorithms</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>m1-algorithm-analysis</module>
+        <module>m2-arrays</module>
+        <module>m3-collections-review</module>
+        <module>m4-linked-lists</module>
+        <module>m5-stack-and-recursion</module>
+        <module>m6-problem-solving</module>
+        <module>m7-queues-and-hashing</module>
+        <module>m8-tree</module>
+        <module>m9-heap</module>
+        <module>m10-search-algorithms</module>
+        <module>m11-sorting-algorithms</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
 </project>

@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.nogayhusrev;
 
 import java.util.Stack;
 
@@ -13,28 +13,27 @@ public class ReverseFirstKElementProblem {
         System.out.println("--------------Before-------------");
 
 
-        reverseFirstK(queue,4);
+        reverseFirstK(queue, 4);
         int k = queue.size();
-        for (int i = 0 ; i < k; i++) {
+        for (int i = 0; i < k; i++) {
             System.out.println(queue.dequeue());
         }
-
 
 
     }
 
 
-    public  static MyQueue<Integer> reverseFirstK(MyQueue<Integer> queue, int k){
+    public static MyQueue<Integer> reverseFirstK(MyQueue<Integer> queue, int k) {
 
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < k; i++) {
             stack.push(queue.dequeue());
         }
 
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             queue.enqueue(stack.pop());
         }
-        for (int i = 0; i < queue.size-k; i++) {
+        for (int i = 0; i < queue.size - k; i++) {
             queue.enqueue(queue.dequeue());
         }
 

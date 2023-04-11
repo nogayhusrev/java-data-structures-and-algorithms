@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 public class Node {
 

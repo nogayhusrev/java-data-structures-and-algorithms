@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 public class MySinglyLinkedListDemo {
 
@@ -26,7 +26,6 @@ public class MySinglyLinkedListDemo {
 
         System.out.println("-------------KthElement()------------");
         System.out.println(list.getKthItemFromLast(10));
-
 
 
     }

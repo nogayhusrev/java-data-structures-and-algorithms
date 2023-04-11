@@ -1,8 +1,7 @@
-package com.cydeo;
+package com.nogayhusrev;
 
 import com.github.javafaker.Faker;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {

@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/m1-algorithm-analysis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m1-algorithm-analysis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m10-search-algorithms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m10-search-algorithms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m11-sorting-algorithms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m11-sorting-algorithms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m2-arrays/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m2-arrays/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m3-collections-review/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m3-collections-review/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m4-linked-lists/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m4-linked-lists/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m5-stack-and-recursion/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m5-stack-and-recursion/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m6-problem-solving/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m6-problem-solving/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m7-queues-and-hashing/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m7-queues-and-hashing/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m8-tree/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m8-tree/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m9-heap/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m9-heap/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

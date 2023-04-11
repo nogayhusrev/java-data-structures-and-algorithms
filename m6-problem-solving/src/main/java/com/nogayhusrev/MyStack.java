@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 import java.util.NoSuchElementException;
 
@@ -9,37 +9,36 @@ public class MyStack<T> {
     private int size = 0;
 
 
-
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return bottom == null;
     }
 
-    public void push(T data){
+    public void push(T data) {
         StackNode<T> node = new StackNode<>(data);
 
-        if (isEmpty()){
+        if (isEmpty()) {
             bottom = top = node;
-        }else {
+        } else {
             top.next = node;
             top = node;
         }
         size++;
     }
 
-    public T peek(){
-        return (T)top.getData();
+    public T peek() {
+        return (T) top.getData();
     }
 
-    public T pop(){
+    public T pop() {
         StackNode<T> peekNode, prev;
 
         if (isEmpty())
             throw new NoSuchElementException();
-        if (top == bottom){
+        if (top == bottom) {
             peekNode = top;
             top = bottom = null;
 
-        }else {
+        } else {
             peekNode = top;
             prev = bottom;
 

@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 public class ExprBalanceCheck {
 
@@ -7,22 +7,22 @@ public class ExprBalanceCheck {
 
     }
 
-    public static boolean balanceCheck(String expr){
-        MyStack<Character>  stack = new MyStack<>();
+    public static boolean balanceCheck(String expr) {
+        MyStack<Character> stack = new MyStack<>();
 
 
         for (int i = 0; i < expr.length(); i++) {
             Character ch = expr.charAt(i);
 
-            if (ch!='('&& ch!='['&& ch!='{'&& ch!=')'&& ch!=']'&& ch!='}' )
-                continue ;
+            if (ch != '(' && ch != '[' && ch != '{' && ch != ')' && ch != ']' && ch != '}')
+                continue;
 
-            if(ch=='('|| ch=='['|| ch=='{') {
+            if (ch == '(' || ch == '[' || ch == '{') {
                 stack.push(ch);
                 continue;
             }
 
-            switch (ch){
+            switch (ch) {
                 case ')':
                     if (stack.pop() != '(')
                         return false;

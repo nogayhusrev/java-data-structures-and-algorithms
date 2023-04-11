@@ -1,8 +1,6 @@
-package com.cydeo;
+package com.nogayhusrev;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -12,7 +10,7 @@ import lombok.EqualsAndHashCode;
 public class TNode {
 
     int value;
-    TNode left,right;
+    TNode left, right;
 
     int height;
 

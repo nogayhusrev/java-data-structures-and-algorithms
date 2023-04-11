@@ -1,9 +1,8 @@
-package com.cydeo;
+package com.nogayhusrev;
 
 public class VisualizeTree {
 
-    public  static void printTree( TNode root, Trunk prev, boolean isLeft)
-    {
+    public static void printTree(TNode root, Trunk prev, boolean isLeft) {
         if (root == null) {
             return;
         }
@@ -15,12 +14,10 @@ public class VisualizeTree {
 
         if (prev == null) {
             trunk.str = "———";
-        }
-        else if (isLeft) {
+        } else if (isLeft) {
             trunk.str = ".———";
             prev_str = "   |";
-        }
-        else {
+        } else {
             trunk.str = "`———";
             prev.str = prev_str;
         }
@@ -35,8 +32,8 @@ public class VisualizeTree {
 
         printTree(root.left, trunk, false);
     }
-    public static void showTrunks(Trunk p)
-    {
+
+    public static void showTrunks(Trunk p) {
         if (p == null) {
             return;
         }

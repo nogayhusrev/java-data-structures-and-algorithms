@@ -1,6 +1,4 @@
-package com.cydeo;
-
-import static java.lang.Math.max;
+package com.nogayhusrev;
 
 public class AvlTree {
 

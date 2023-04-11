@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 public class MergeTwoSortedList {
 
@@ -13,32 +13,31 @@ public class MergeTwoSortedList {
             b.add(i);
         }
 
-        a =mergeTwoSorted(a,b);
+        a = mergeTwoSorted(a, b);
         a.printNodes();
-
 
 
     }
 
-    public static MySinglyLinkedList mergeTwoSorted(MySinglyLinkedList listA, MySinglyLinkedList listB ){
+    public static MySinglyLinkedList mergeTwoSorted(MySinglyLinkedList listA, MySinglyLinkedList listB) {
         Node currA = listA.head;
         Node currB = listB.head;
 
         Node tempHead = new Node();
         Node prev = tempHead;
 
-        while (currA != null && currB != null){
-            if (currA.id <= currB.id){
+        while (currA != null && currB != null) {
+            if (currA.id <= currB.id) {
                 prev.next = currA;
                 currA = currA.next;
-            }else {
+            } else {
                 prev.next = currB;
                 currB = currB.next;
             }
             prev = prev.next;
         }
 
-        if (currA == null ) prev.next = currB;
+        if (currA == null) prev.next = currB;
         else prev.next = currA;
 
         listA.head = tempHead.next;

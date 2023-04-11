@@ -1,4 +1,4 @@
-package org.cydeo;
+package com.nogayhusrev;
 
 import java.util.HashSet;
 
@@ -21,13 +21,13 @@ public class FindCycle {
 
     }
 
-    public static boolean isCycle2(Node head){
+    public static boolean isCycle2(Node head) {
 
         HashSet<Node> list = new HashSet<>();
 
         Node current = head;
 
-        while (current != null){
+        while (current != null) {
             current = current.next;
             if (!list.add(current))
                 return true;
@@ -36,10 +36,10 @@ public class FindCycle {
     }
 
 
-    public static boolean isCycle(Node head){
+    public static boolean isCycle(Node head) {
         Node current = head;
         boolean isCycle = false;
-        while (current != null){
+        while (current != null) {
             current = current.next;
             if (current == head)
                 return true;
